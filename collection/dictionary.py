@@ -57,3 +57,9 @@ print(sunnydale)
 # A.clear() : 딕셔너리의 모든 값을 제거
 sunnydale.clear()
 print(sunnydale)
+
+# sorted() : 딕셔너리의 키는 임의의 순서대로 나타나지만, sorted 함수를 사용하면 key가 정렬된 상태로 순회할 수 있다.
+# python 3.7 버전부터는 삽입 순서대로 반복이 되게끔 변경됨
+d = dict(c="!", b="world", a="hello")
+for key in sorted(d.keys()):
+    print(key, d[key])
