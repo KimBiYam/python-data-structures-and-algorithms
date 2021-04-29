@@ -32,5 +32,28 @@ print(d)
 sunnydale = dict(name='제인', age=18, hobby='게임')
 print(sunnydale.get('hobby'))
 print(sunnydale['hobby'])
-print(sunnydale.get('hello'))  # print : None
-print(sunnydale['hello'])
+print(sunnydale.get('hello'))  # None
+# print(sunnydale['hello']) - Dictionray[key] 로 접근시에 해당 key가 없는 경우에는 KeyError Exception 발생
+
+# A.items() : 해당 딕셔너리의 아이템을 조회하는 읽기 전용의 반복 가능한 객체를 리턴함
+# A.values() : 해당 딕셔너리의 값들을 조회하는 읽기 전용의 반복 가능한 객체를 리턴함
+# A.keys() : 해당 딕셔너리의 키들을 조회하는 읽기 전용의 반복 가능한 객체를 리턴함
+sunnydale = dict(name="잰더", age=17, hobby="게임")
+print(sunnydale.items())
+print(sunnydale.values())
+print(sunnydale.keys())
+sunnydale_copy = sunnydale.items()
+# sunnydale_copy['address'] = '서울' - throw Exception
+sunnydale['address'] = '서울'
+print(sunnydale)
+
+# A.pop(key) : 딕셔너리 A의 key 항목을 제거 후, 그 값을 리턴
+# A.popitem() : 딕셔너리 A에서 항목을 제거 후, 그 키와 항목을 리턴
+sunnydale = dict(name="잰더", age=17, hobby="게임", address="서울")
+print(sunnydale.pop("age"))
+print(sunnydale.popitem())
+print(sunnydale)
+
+# A.clear() : 딕셔너리의 모든 값을 제거
+sunnydale.clear()
+print(sunnydale)
