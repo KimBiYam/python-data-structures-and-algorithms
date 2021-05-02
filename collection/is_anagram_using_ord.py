@@ -24,7 +24,7 @@ def test_find_anagram_hash_function():
     assert(find_anagram_hash_function(word1, word3) is False)
 
     # find_anagram_hash_function 함수에서 양쪽 문자의 바이트값을 비교하기 때문에
-    # 애너그램 외에도 단순히 서로 바이트 값이 같은 경우에도 애너그램으로 인식되는 문제가 있음
+    # 애너그램이 아님에도 단순히 서로 바이트 값이 같은 경우에도 애너그램으로 인식되는 문제가 있음
     word1 = "aad"
     word2 = "bca"
     assert(find_anagram_hash_function(word1, word2) is True)
