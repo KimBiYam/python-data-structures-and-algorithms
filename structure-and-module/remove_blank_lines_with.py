@@ -2,6 +2,8 @@
 import sys
 
 
+# 파일 입출력 시 with 키워드와 함께 사용하면 close로 열어준 파일을 닫지 않아도 된다.
+
 def read_data(filename):
     lines = []
     with open(filename) as file:
