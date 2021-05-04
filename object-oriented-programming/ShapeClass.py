@@ -56,4 +56,3 @@ if __name__ == "__main__":
     print(str(circle))
     print(circle.circumference())
     print(circle.edge_distance_from_origin())
-    
